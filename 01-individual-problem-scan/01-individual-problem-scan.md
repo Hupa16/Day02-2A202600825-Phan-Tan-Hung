@@ -1,7 +1,7 @@
 
 ---
 
-# 01 — Individual Problem Scan
+# Individual Problem Scan
 
 ## Scan rộng
 
@@ -25,7 +25,7 @@
 | 2 | Có quá nhiều tài liệu tham khảo nhưng không biết nên đọc tài liệu nào trước | vì tài liệu quá nhiều và phân tán, người học dễ bị overload thông tin và mất định hướng | Chưa rõ có thể đo hiệu quả cải thiện bằng metric nào ngoài thời gian tiết kiệm |
 | 3 | Không biết roadmap học AI/lập trình theo thứ tự phù hợp | Người mới thường học lan man, không biết nên bắt đầu từ đâu hoặc build project gì tiếp theo | Khó cá nhân hóa roadmap vì mỗi người có nền tảng và mục tiêu khác nhau |
 
-## Problem Card #1 — Weekly Report
+
 # Problem Card 1
 
 ```text
@@ -154,3 +154,190 @@ Quick gut:
 [x] Agent
 [ ] Chưa biết
 ```
+# Draft Workflow — Problem Card 1
+
+## Setup thư viện và môi trường quá mất thời gian
+
+```text
+CURRENT STATE — 2-3 tiếng
+
+[Clone project từ GitHub: 5']
+→ [Đọc README/tutorial: 15']
+→ [Cài Python/CUDA: 20']
+→ [Cài thư viện bằng pip/conda: 20']
+→ [Lỗi version/dependency: 40']  <-- bottleneck
+→ [Search Google/StackOverflow: 45']
+→ [Fix thử nhiều cách: 30']
+→ [Chạy thử project: 10']
+
+FUTURE STATE — 20-30 phút
+
+[Clone project: 5']
+→ [AI scan requirements + môi trường: 2']
+→ [Auto generate setup script: 3']
+→ [AI detect lỗi dependency: 5']
+→ [User confirm & run fix: 10']  <-- human boundary
+→ [Project chạy thành công: 5']
+
+Fallback:
+Nếu AI fix sai → user dùng guideline setup chuẩn hoặc Docker image có sẵn.
+```
+
+---
+
+# Draft Workflow — Problem Card 2
+
+## Quá nhiều tài liệu tham khảo, không biết đọc gì trước
+
+```text
+CURRENT STATE — 5-7 tiếng
+
+[Search tài liệu/course: 30']
+→ [Mở nhiều tab/video khác nhau: 20']
+→ [Đọc thử từng tài liệu: 2-3 tiếng]
+→ [Không hiểu mức độ phù hợp: 1 tiếng]  <-- bottleneck
+→ [Tiếp tục search thêm nguồn: 1 tiếng]
+→ [Bị overload thông tin: 30']
+→ [Học lan man hoặc bỏ cuộc]
+
+FUTURE STATE — 1-2 tiếng
+
+[Nhập mục tiêu học: 5']
+→ [AI phân tích trình độ user: 5']
+→ [AI lọc & xếp hạng tài liệu: 10']
+→ [AI tạo learning path: 10']
+→ [User review roadmap: 15']  <-- human boundary
+→ [Bắt đầu học theo roadmap]
+
+Fallback:
+Nếu roadmap AI không phù hợp → user chọn curated list từ giảng viên/senior.
+```
+
+---
+
+# Draft Workflow — Problem Card 3
+
+## Không biết roadmap học AI/lập trình phù hợp
+
+```text
+CURRENT STATE — Nhiều tuần mất định hướng
+
+[Search roadmap trên mạng: 1 tiếng]
+→ [Xem nhiều video/course: 3-4 tiếng]
+→ [Học theo cảm hứng: nhiều ngày]
+→ [Không biết kiến thức nào quan trọng]  <-- bottleneck
+→ [Không biết build project gì]
+→ [Mất động lực vì không thấy tiến bộ]
+→ [Đổi roadmap liên tục]
+
+FUTURE STATE — 1 ngày để có roadmap rõ ràng
+
+[User nhập mục tiêu + level hiện tại: 10']
+→ [AI phân tích kỹ năng còn thiếu: 5']
+→ [AI generate roadmap cá nhân hóa: 10']
+→ [AI đề xuất project phù hợp: 5']
+→ [User review & chỉnh roadmap: 20']  <-- human boundary
+→ [Bắt đầu học theo milestone rõ ràng]
+
+Fallback:
+Nếu roadmap AI quá khó/dễ → user chỉnh lại mục tiêu hoặc dùng roadmap cố định từ mentor.
+```
+# Chọn card muốn pitch nhất 
+
+
+---
+
+# Problem Card 3 — Không biết roadmap học phù hợp
+
+Card tôi muốn pitch:
+
+```text id="c3p1"
+Problem Card 3 — Không biết roadmap học AI/lập trình phù hợp
+```
+
+Vì sao:
+
+```text id="c3p2"
+Đây là vấn đề dài hạn mà rất nhiều học viên gặp phải khi mới học AI hoặc chuyển sang lĩnh vực mới.
+
+Người học thường:
+- học theo trend
+- xem quá nhiều roadmap khác nhau
+- không biết kiến thức nào quan trọng
+- không biết khi nào nên build project
+
+Workflow hiện tại thiếu định hướng rõ ràng nên dễ mất động lực hoặc học sai thứ tự.
+
+Impact lớn vì ảnh hưởng trực tiếp đến tốc độ học và khả năng phát triển kỹ năng lâu dài.
+
+Bài toán này cũng có tiềm năng dùng AI Agent vì cần:
+- hiểu mục tiêu người dùng
+- đánh giá kỹ năng hiện tại
+- lập kế hoạch nhiều bước
+- cập nhật roadmap theo tiến độ học
+```
+
+Câu hỏi tôi muốn nhóm challenge:
+
+```text id="c3p3"
+1. Roadmap có thể cá nhân hóa đủ tốt bằng AI không?
+
+2. Làm sao AI đánh giá đúng trình độ thực tế của người học?
+
+3. Có cần AI Agent tự theo dõi tiến độ học hay chỉ cần workflow recommendation là đủ?
+```
+
+# Nếu dùng AI ở phase này
+
+## Không biết roadmap học phù hợp
+
+```text id="fb3"
+1. Actor chưa đủ cụ thể.
+Người mới học AI/lập trình quá rộng:
+- học để đi làm AI engineer?
+- học để build AI app?
+- sinh viên năm mấy?
+
+2. Workflow có thật.
+Pain này phổ biến với sinh viên IT.
+Cần chỉ rõ:
+- user đang lấy roadmap từ đâu?
+- decision point nào khiến user bị stuck?
+- bước nào tốn thời gian nhất?
+
+3. Bottleneck tương đối rõ.
+Thiếu roadmap cá nhân hóa là pain thật.
+Nhưng chưa chắc bottleneck nằm ở roadmap.
+Có thể vấn đề thật là:
+- thiếu discipline
+- thiếu mentor
+- thiếu project thực tế
+- không có feedback loop
+
+4. Metric còn mơ hồ.
+
+Cần metric dài hạn hơn:
+- completion rate sau 1 tháng
+- số project hoàn thành
+- thời gian đạt milestone
+- mức độ consistency khi học
+
+5. Rule/process fix chưa được đánh giá đủ.
+Roadmap template theo từng role:
+- AI Engineer
+- Data Scientist
+- Backend AI Developer
+
+có thể đã giải quyết được phần lớn problem mà chưa cần AI personalization.
+
+6. Có dấu hiệu nhảy sang Agent hơi sớm.
+Hiện tại chưa có bằng chứng cần autonomous agent.
+Workflow recommendation + periodic adjustment có thể đủ.
+
+Agent chỉ hợp lý nếu:
+- system cần theo dõi tiến độ dài hạn
+- tự cập nhật roadmap
+- chủ động đề xuất next step
+- integrate nhiều nguồn learning data
+```
+
