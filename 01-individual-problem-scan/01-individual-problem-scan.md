@@ -158,28 +158,54 @@ Quick gut:
 
 ## Setup thư viện và môi trường quá mất thời gian
 
-```text
-CURRENT STATE — 2-3 tiếng
+### Current State
 
-[Clone project từ GitHub: 5']
-→ [Đọc README/tutorial: 15']
-→ [Cài Python/CUDA: 20']
-→ [Cài thư viện bằng pip/conda: 20']
-→ [Lỗi version/dependency: 40']  <-- bottleneck
-→ [Search Google/StackOverflow: 45']
-→ [Fix thử nhiều cách: 30']
-→ [Chạy thử project: 10']
+```mermaid id="m1cur"
+flowchart TD
 
-FUTURE STATE — 20-30 phút
+A[Clone project từ GitHub<br>5 phút]
+--> B[Đọc README/tutorial<br>15 phút]
 
-[Clone project: 5']
-→ [AI scan requirements + môi trường: 2']
-→ [Auto generate setup script: 3']
-→ [AI detect lỗi dependency: 5']
-→ [User confirm & run fix: 10']  <-- human boundary
-→ [Project chạy thành công: 5']
+B --> C[Cài Python/CUDA<br>20 phút]
+
+C --> D[Cài thư viện bằng pip/conda<br>20 phút]
+
+D --> E[Lỗi version/dependency<br>40 phút]
+
+E --> F[Search Google/StackOverflow<br>45 phút]
+
+F --> G[Fix thử nhiều cách<br>30 phút]
+
+G --> H[Chạy thử project<br>10 phút]
+
+style E fill:#ffb3b3
+```
+
+### Future State
+
+```mermaid id="m1future"
+flowchart TD
+
+A[Clone project<br>5 phút]
+--> B[AI scan requirements + môi trường<br>2 phút]
+
+B --> C[Auto generate setup script<br>3 phút]
+
+C --> D[AI detect lỗi dependency<br>5 phút]
+
+D --> E[User confirm & run fix<br>10 phút]
+
+E --> F[Project chạy thành công<br>5 phút]
+
+style B fill:#b3ffcc
+style C fill:#b3ffcc
+style D fill:#b3ffcc
+style E fill:#ffe699
+```
 
 Fallback:
+
+```text id="m1fb"
 Nếu AI fix sai → user dùng guideline setup chuẩn hoặc Docker image có sẵn.
 ```
 
@@ -189,27 +215,53 @@ Nếu AI fix sai → user dùng guideline setup chuẩn hoặc Docker image có 
 
 ## Quá nhiều tài liệu tham khảo, không biết đọc gì trước
 
-```text
-CURRENT STATE — 5-7 tiếng
+### Current State
 
-[Search tài liệu/course: 30']
-→ [Mở nhiều tab/video khác nhau: 20']
-→ [Đọc thử từng tài liệu: 2-3 tiếng]
-→ [Không hiểu mức độ phù hợp: 1 tiếng]  <-- bottleneck
-→ [Tiếp tục search thêm nguồn: 1 tiếng]
-→ [Bị overload thông tin: 30']
-→ [Học lan man hoặc bỏ cuộc]
+```mermaid id="m2cur"
+flowchart TD
 
-FUTURE STATE — 1-2 tiếng
+A[Search tài liệu/course<br>30 phút]
+--> B[Mở nhiều tab/video khác nhau<br>20 phút]
 
-[Nhập mục tiêu học: 5']
-→ [AI phân tích trình độ user: 5']
-→ [AI lọc & xếp hạng tài liệu: 10']
-→ [AI tạo learning path: 10']
-→ [User review roadmap: 15']  <-- human boundary
-→ [Bắt đầu học theo roadmap]
+B --> C[Đọc thử từng tài liệu<br>2-3 tiếng]
+
+C --> D[Không hiểu mức độ phù hợp<br>1 tiếng]
+
+D --> E[Tiếp tục search thêm nguồn<br>1 tiếng]
+
+E --> F[Bị overload thông tin<br>30 phút]
+
+F --> G[Học lan man hoặc bỏ cuộc]
+
+style D fill:#ffb3b3
+style F fill:#ffb3b3
+```
+
+### Future State
+
+```mermaid id="m2future"
+flowchart TD
+
+A[Nhập mục tiêu học<br>5 phút]
+--> B[AI phân tích trình độ user<br>5 phút]
+
+B --> C[AI lọc & xếp hạng tài liệu<br>10 phút]
+
+C --> D[AI tạo learning path<br>10 phút]
+
+D --> E[User review roadmap<br>15 phút]
+
+E --> F[Bắt đầu học theo roadmap]
+
+style B fill:#b3ffcc
+style C fill:#b3ffcc
+style D fill:#b3ffcc
+style E fill:#ffe699
+```
 
 Fallback:
+
+```text id="m2fb"
 Nếu roadmap AI không phù hợp → user chọn curated list từ giảng viên/senior.
 ```
 
@@ -219,28 +271,59 @@ Nếu roadmap AI không phù hợp → user chọn curated list từ giảng vi�
 
 ## Không biết roadmap học AI/lập trình phù hợp
 
-```text
-CURRENT STATE — Nhiều tuần mất định hướng
+### Current State
 
-[Search roadmap trên mạng: 1 tiếng]
-→ [Xem nhiều video/course: 3-4 tiếng]
-→ [Học theo cảm hứng: nhiều ngày]
-→ [Không biết kiến thức nào quan trọng]  <-- bottleneck
-→ [Không biết build project gì]
-→ [Mất động lực vì không thấy tiến bộ]
-→ [Đổi roadmap liên tục]
+```mermaid id="m3cur"
+flowchart TD
 
-FUTURE STATE — 1 ngày để có roadmap rõ ràng
+A[Search roadmap trên mạng<br>1 tiếng]
+--> B[Xem nhiều video/course<br>3-4 tiếng]
 
-[User nhập mục tiêu + level hiện tại: 10']
-→ [AI phân tích kỹ năng còn thiếu: 5']
-→ [AI generate roadmap cá nhân hóa: 10']
-→ [AI đề xuất project phù hợp: 5']
-→ [User review & chỉnh roadmap: 20']  <-- human boundary
-→ [Bắt đầu học theo milestone rõ ràng]
+B --> C[Học theo cảm hứng<br>nhiều ngày]
+
+C --> D[Không biết kiến thức nào quan trọng]
+
+D --> E[Không biết build project gì]
+
+E --> F[Mất động lực vì không thấy tiến bộ]
+
+F --> G[Đổi roadmap liên tục]
+
+style D fill:#ffb3b3
+style E fill:#ffb3b3
+```
+
+### Future State
+
+```mermaid id="m3future"
+flowchart TD
+
+A[User nhập mục tiêu + level hiện tại<br>10 phút]
+--> B[AI phân tích kỹ năng còn thiếu<br>5 phút]
+
+B --> C[AI generate roadmap cá nhân hóa<br>10 phút]
+
+C --> D[AI đề xuất project phù hợp<br>5 phút]
+
+D --> E[User review & chỉnh roadmap<br>20 phút]
+
+E --> F[Bắt đầu học theo milestone rõ ràng]
+
+F --> G[AI theo dõi tiến độ & đề xuất next step]
+
+style B fill:#b3ffcc
+style C fill:#b3ffcc
+style D fill:#b3ffcc
+style G fill:#b3ffcc
+style E fill:#ffe699
+```
 
 Fallback:
+
+```text id="m3fb"
 Nếu roadmap AI quá khó/dễ → user chỉnh lại mục tiêu hoặc dùng roadmap cố định từ mentor.
+```
+
 ```
 # Chọn card muốn pitch nhất 
 
