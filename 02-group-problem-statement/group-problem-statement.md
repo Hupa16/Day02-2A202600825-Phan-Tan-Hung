@@ -82,53 +82,54 @@ Workflow hợp lý hơn là:
 - gợi ý bước tiếp theo,
 - nhưng người học vẫn phải tự build và tự verify hiểu biết.
 ```
+## CURRENT STATE — Workflow học thiếu hiệu quả
 
 ```mermaid
 flowchart TD
 
-    subgraph CURRENT["CURRENT STATE — 8 bước, ~3-5 giờ/tuần học thiếu hiệu quả"]
+    A1["Bước 1<br/>Search roadmap/tutorial<br/><br/>👤 Student<br/>⏱ 20-30'<br/>Input: YouTube, Google<br/>Output: nhiều roadmap khác nhau"]
 
-        A1["Bước 1<br/>Search roadmap/tutorial<br/><br/>👤 Student<br/>⏱ 20-30'<br/>Input: YouTube, Google<br/>Output: nhiều roadmap khác nhau"]
+    A2["Bước 2<br/>Xem course/tutorial<br/><br/>👤 Student<br/>⏱ 30-60'<br/>Input: video/course<br/>Output: sample code"]
 
-        A2["Bước 2<br/>Xem course/tutorial<br/><br/>👤 Student<br/>⏱ 30-60'<br/>Input: video/course<br/>Output: sample code"]
+    A3["Bước 3<br/>Copy code theo tutorial<br/><br/>👤 Student<br/>⏱ 20-40'<br/>Input: sample code<br/>Output: local project"]
 
-        A3["Bước 3<br/>Copy code theo tutorial<br/><br/>👤 Student<br/>⏱ 20-40'<br/>Input: sample code<br/>Output: local project"]
+    A4["Bước 4<br/>Build project bị lỗi<br/><br/>👤 Student<br/>⏱ 30-60'<br/>Input: local project<br/>Output: error/confusion"]
 
-        A4["Bước 4<br/>Build project bị lỗi<br/><br/>👤 Student<br/>⏱ 30-60'<br/>Input: local project<br/>Output: error/confusion"]
+    A5["Bước 5<br/>Không hiểu foundation<br/>(ML/LLM concepts)<br/><br/>👤 Student<br/>⏱ 30-45'<br/>Input: error/concept<br/>Output: confusion"]
 
-        A5["Bước 5<br/>Không hiểu foundation<br/>(ML/LLM concepts)<br/><br/>👤 Student<br/>⏱ 30-45'<br/>Input: error/concept<br/>Output: confusion"]
+    A6["Bước 6<br/>Search tiếp tutorial khác<br/><br/>👤 Student<br/>⏱ 20-40'<br/>Input: confusion<br/>Output: tutorial mới"]
 
-        A6["Bước 6<br/>Search tiếp tutorial khác<br/><br/>👤 Student<br/>⏱ 20-40'<br/>Input: confusion<br/>Output: tutorial mới"]
+    A7["Bước 7<br/>Đổi roadmap/tutorial<br/><br/>👤 Student<br/>⏱ 10-20'<br/>Input: tutorial mới<br/>Output: workflow mới"]
 
-        A7["Bước 7<br/>Đổi roadmap/tutorial<br/><br/>👤 Student<br/>⏱ 10-20'<br/>Input: tutorial mới<br/>Output: workflow mới"]
+    A8["Bước 8<br/>Mất định hướng / bỏ project<br/><br/>👤 Student<br/>⏱ khó đo<br/>Input: learning overload<br/>Output: unfinished project"]
 
-        A8["Bước 8<br/>Mất định hướng / bỏ project<br/><br/>👤 Student<br/>⏱ khó đo<br/>Input: learning overload<br/>Output: unfinished project"]
-
-        A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7 --> A8
-    end
+    A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7 --> A8
 
     B1["🔴 Bottleneck:<br/>- Không biết thiếu foundation gì<br/>- Không biết bước tiếp theo nên học gì<br/>- Học nhiều nhưng không build được project độc lập"]
 
     B2["⏱ Tổng effort:<br/>~3-5 giờ/tuần nhưng hiệu quả thấp"]
 
     A8 --> B1 --> B2
+```
 
-    subgraph FUTURE["FUTURE STATE — 6 bước, ~45-60 phút setup learning workflow"]
+## FUTURE STATE — AI-assisted learning workflow
 
-        F1["Bước 1<br/>Input goal + background<br/><br/>🟢 Human<br/>⏱ 5'<br/>Input: skill + goal<br/>Output: learner profile"]
+```mermaid
+flowchart TD
 
-        F2["Bước 2<br/>AI recommend roadmap<br/><br/>🔵 Workflow step<br/>⏱ 1-2'<br/>Input: learner profile<br/>Output: roadmap phù hợp"]
+    F1["Bước 1<br/>Input goal + background<br/><br/>🟢 Human<br/>⏱ 5'<br/>Input: skill + goal<br/>Output: learner profile"]
 
-        F3["Bước 3<br/>AI suggest project/tutorial<br/><br/>🔵 Workflow step<br/>⏱ 1-2'<br/>Input: roadmap<br/>Output: suggested project"]
+    F2["Bước 2<br/>AI recommend roadmap<br/><br/>🔵 Workflow step<br/>⏱ 1-2'<br/>Input: learner profile<br/>Output: roadmap phù hợp"]
 
-        F4["Bước 4<br/>Student build project<br/><br/>🟢 Human<br/>⏱ 30-40'<br/>Input: project/task<br/>Output: implementation"]
+    F3["Bước 3<br/>AI suggest project/tutorial<br/><br/>🔵 Workflow step<br/>⏱ 1-2'<br/>Input: roadmap<br/>Output: suggested project"]
 
-        F5["Bước 5<br/>AI explain lỗi/concept<br/><br/>🔵 Workflow step<br/>⏱ 2-5'<br/>Input: error/question<br/>Output: explanation/guidance"]
+    F4["Bước 4<br/>Student build project<br/><br/>🟢 Human<br/>⏱ 30-40'<br/>Input: project/task<br/>Output: implementation"]
 
-        F6["Bước 6<br/>Student review + continue<br/><br/>🟢 Human boundary<br/>⏱ ongoing<br/>Input: explanation<br/>Output: deeper understanding"]
+    F5["Bước 5<br/>AI explain lỗi/concept<br/><br/>🔵 Workflow step<br/>⏱ 2-5'<br/>Input: error/question<br/>Output: explanation/guidance"]
 
-        F1 --> F2 --> F3 --> F4 --> F5 --> F6
-    end
+    F6["Bước 6<br/>Student review + continue<br/><br/>🟢 Human boundary<br/>⏱ ongoing<br/>Input: explanation<br/>Output: deeper understanding"]
+
+    F1 --> F2 --> F3 --> F4 --> F5 --> F6
 
     C1["🔵 = AI hỗ trợ workflow"]
     C2["🟢 = Human boundary"]
