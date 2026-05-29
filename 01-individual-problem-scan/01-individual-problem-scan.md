@@ -5,24 +5,17 @@
 
 ## Scan rộng
 
-Minh scan 10 problems, vượt mức tối thiểu 5.
-| # | Lăng kính | Problem quan sát được | Ai đang đau? | Dấu hiệu thật |
-| - | - | - | - |
-| 1 | Tốn thời gian | Phải cài quá nhiều thư viện, setup môi trường khác nhau cho từng môn/lab/project nên mất rất nhiều thời gian trước khi code được | Sinh viên IT, người mới học AI/lập trình | Mỗi lần làm lab mới mất 1-3 tiếng chỉ để fix lỗi pip, version, CUDA, PATH |
-| 2 | Pain từ người khác | Thông tin học tập bị phân tán trên quá nhiều nền tảng như Zalo, Gmail, Discord nên dễ bỏ sót deadline hoặc tài liệu  | Sinh viên học nhiều môn/project | Phải check liên tục nhiều app mỗi ngày, từng bị miss deadline hoặc không thấy file quan trọng |
-| 3 | Tốn thời gian | Có quá nhiều tài liệu tham khảo, video, docs nhưng không biết đọc cái nào trước nên bị overload thông tin | Người mới học AI/coding | Bookmark hàng chục link nhưng đọc không hết, học lan man và mất định hướng |
-| 4 | AI có thể tốt hơn  | Chưa biết cách dùng các công cụ AI hỗ trợ như Cursor, Codex, Claude Code nên dù có tool vẫn chưa tăng được hiệu suất học/code | Sinh viên mới tiếp cận AI tools | Chủ yếu vẫn code thủ công, chưa biết workflow dùng AI đúng cách |
-| 5 | Lặp lại | Mỗi lần lỗi code phải tự search Google hoặc StackOverflow rất lâu vì không biết debug từ đâu  | Sinh viên lập trình | Một lỗi có thể mất vài tiếng để sửa, thường copy nguyên error lên mạng  |
-| 6 | Pain từ người khác | Làm việc nhóm khó đồng bộ version source code và cách setup môi trường | Nhóm làm project | Máy chạy được nhưng máy bạn khác lại lỗi dependency |
-| 7 | AI có thể tốt hơn  | Không biết roadmap học AI/lập trình theo thứ tự nào nên học thiếu nền tảng hoặc học quá rộng | Người mới học công nghệ | Học nhiều course nhưng vẫn không biết nên build project gì tiếp theo |
-| 8 | Lặp lại | Quá nhiều notification từ lớp học, CLB, project khiến khó tập trung và dễ quên việc quan trọng | Sinh viên | Notification hàng trăm tin/ngày từ Zalo, Discord, Messenger |
+| # | Lăng kính          | Problem quan sát được                                                                                           | Ai đang đau?                             | Dấu hiệu thật                                                                        |
+| - | ------------------ | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------ |
+| 1 | Tốn thời gian      | Phải cài nhiều thư viện và setup môi trường khác nhau cho từng project/lab trước khi bắt đầu code               | Sinh viên IT, người mới học AI/lập trình | Mỗi lần setup project mới mất 1-3 tiếng để fix lỗi thư viện, version hoặc môi trường |
+| 2 | Pain từ người khác | Thông tin học tập bị phân tán trên nhiều nền tảng như Zalo, Gmail, Discord nên dễ bỏ sót deadline hoặc tài liệu | Sinh viên học nhiều môn/project          | Phải check nhiều app mỗi ngày, từng bị miss deadline hoặc không thấy file quan trọng |
+| 3 | Tốn thời gian      | Có quá nhiều tài liệu tham khảo nhưng không biết nên đọc tài liệu nào trước                                     | Người mới học AI/coding                  | Lưu rất nhiều link/video nhưng không đọc hết, học lan man và mất định hướng          |
+| 4 | AI có thể tốt hơn  | Chưa biết sử dụng hiệu quả các công cụ AI hỗ trợ như Cursor, Codex, Claude Code                                 | Sinh viên mới tiếp cận AI tools          | Chủ yếu vẫn code thủ công, chưa biết cách để AI hỗ trợ debug/code nhanh hơn          |
+| 5 | Lặp lại            | Mỗi lần gặp lỗi code phải tự search Google hoặc StackOverflow rất lâu                                           | Sinh viên lập trình                      | Một lỗi nhỏ có thể mất vài tiếng để sửa vì không biết nguyên nhân                    |
+| 6 | Pain từ người khác | Làm việc nhóm khó đồng bộ source code và môi trường giữa các thành viên                                         | Nhóm làm project                         | Máy của mình chạy được nhưng máy bạn khác lại lỗi dependency hoặc version            |
+| 7 | AI có thể tốt hơn  | Không biết roadmap học AI/lập trình theo thứ tự phù hợp                                                         | Người mới học công nghệ                  | Học nhiều khóa/course nhưng vẫn không biết nên tiếp tục học gì                       |
+| 8 | Lặp lại            | Có quá nhiều notification từ lớp học, CLB, project khiến khó tập trung                                          | Sinh viên                                | Mỗi ngày có hàng trăm tin nhắn từ Zalo, Discord, Messenger                           |
 
-Vì sao phần scan này mạnh:
-
-- Có scan rộng trước khi hội tụ.
-- Có nhiều lăng kính khác nhau.
-- Mỗi problem có actor và dấu hiệu thật.
-- Không bắt đầu bằng "làm chatbot" hoặc "xây agent".
 
 ## Top 3
 
