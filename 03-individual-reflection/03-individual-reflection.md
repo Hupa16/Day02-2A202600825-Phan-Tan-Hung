@@ -36,8 +36,7 @@
 ## Tôi học được gì khi nghe top 3 problems của các bạn khác?
 
 ```text id="rf1"
-Mình nhận ra nhiều problem ban đầu tưởng là cá nhân nhưng thực tế rất nhiều sinh viên IT khác cũng gặp. 
-Ngoài ra mình học được cách nhìn problem theo workflow thay vì nghĩ solution ngay từ đầu.
+Mình nhận ra nhiều problem ban đầu tưởng là cá nhân nhưng thực tế rất nhiều học viên khác cũng gặp. 
 ```
 
 ## Nhóm có lúc nào bị solution-first không?
@@ -51,13 +50,13 @@ Sau khi challenge lại thì nhóm quay về phân tích workflow và nhận ra 
 
 ```text id="rf3"
 Có. Ban đầu mình nghĩ problem roadmap học tập cần AI Agent tự động theo dõi người học. 
-Sau khi bị challenge, mình nhận ra chưa có bằng chứng cần autonomous agent và workflow recommendation hợp lý hơn cho scope lab.
+Sau khi bị challenge, mình nhận ra chưa có bằng chứng thực sự cần autonomous agent và workflow recommendation hợp lý hơn cho scope lab.
 ```
 
 ## Tôi đóng góp gì thật sự vào artifact cuối?
 
 ```text id="rf4"
-Mình đóng góp phần problem scan, workflow Mermaid, bottleneck analysis và phần so sánh Workflow vs Agent. 
+Mình đóng góp phần problem scan, workflow, bottleneck analysis và phần so sánh Workflow vs Agent. 
 Ngoài ra mình cũng giúp nhóm scope lại candidate problem để tránh quá rộng.
 ```
 
@@ -84,7 +83,7 @@ Nếu làm lại mình sẽ challenge kỹ hơn ở phần:
 Qua lab này mình học được cách tiếp cận problem-first thay vì AI-first. 
 Trước đây mình thường nghĩ ngay đến việc build AI Agent nhưng sau khi làm workflow và challenge problem thì mình nhận ra nhiều bài toán chỉ cần process fix hoặc workflow automation là đủ.
 
-Mình cũng hiểu rõ hơn cách phân biệt giữa Rule, Workflow và Agent dựa trên độ mơ hồ và độ phức tạp của workflow.
+Mình hiểu rõ hơn cách phân biệt giữa Rule, Workflow và Agent dựa trên độ mơ hồ và độ phức tạp của workflow.
 
 Ngoài ra phần khó nhất không phải nghĩ solution mà là xác định actor, bottleneck, metric và boundary thật sự rõ ràng.
 ```
